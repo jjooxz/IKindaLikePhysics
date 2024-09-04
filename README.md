@@ -5,9 +5,9 @@ This is a simple [physics engine](https://en.wikipedia.org/wiki/Physics_engine) 
 This is still in progress, maybe later i will transform this into a library like [bullet3](https://github.com/bulletphysics/bullet3) or something like that, im thinking of using it in more future projects, simulations or even games
 
 ## Checklist
-- [x] Made simple object class
-- [x] Made first object
-- [x] Made simple physics
+- [x] <strike>Made simple object class</strike>
+- [x] <strike>Made first object</strike>
+- [x] <strike>Made simple physics</strike>
 - [ ] Collision implementation 
 - [ ] Graphics
 - [ ] More Objects
