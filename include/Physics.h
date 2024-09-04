@@ -7,16 +7,18 @@
 class Physics
 {
 public:
-    Physics(float gravity) : gravity(gravity) {};
+    Physics(float gravity) : gravity(gravity) {}
 
     void addObject(PhysicsObject *object);
 
     void update(float deltaTime);
 
+    auto getObjects() { return objects; }
+
 private:
     float gravity;
-
-    std::vector<PhysicsObject *> objects;
+    std::vector<PhysicsObject*> objects;
+    
 };
 
 #endif // PHYSICS_H

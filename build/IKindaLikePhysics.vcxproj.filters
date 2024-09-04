@@ -7,12 +7,15 @@
     <ClCompile Include="E:\Projetos\C++\IKindaLikePhysics\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="E:\Projetos\C++\IKindaLikePhysics\src\Engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="E:\Projetos\C++\IKindaLikePhysics\include\Logger.h">
+    <ClInclude Include="E:\Projetos\C++\IKindaLikePhysics\include\Box.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="E:\Projetos\C++\IKindaLikePhysics\include\Box.h">
+    <ClInclude Include="E:\Projetos\C++\IKindaLikePhysics\include\Logger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="E:\Projetos\C++\IKindaLikePhysics\include\PhysicsObject.h">
@@ -22,6 +25,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="E:\Projetos\C++\IKindaLikePhysics\include\Physics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Projetos\C++\IKindaLikePhysics\include\Engine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

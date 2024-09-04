@@ -1,17 +1,25 @@
 #include "Physics.h"
 
-void Physics::addObject(PhysicsObject* object) {
+void Physics::addObject(PhysicsObject *object)
+{
     objects.push_back(object);
 }
 
-void Physics::update(float deltaTime) {
-    for (PhysicsObject* object : objects) {
+void Physics::update(float deltaTime)
+{
+    for (PhysicsObject *object : objects)
+    {
+        if (object->isStatic())
+            continue;
         object->applyForce({0, gravity});
     }
 
-    for (PhysicsObject* object : objects) {
+    for (PhysicsObject *object : objects)
+    {
+        if (object->isStatic())
+            continue;
         object->update(deltaTime);
     }
 
-    //TODO: Collision detection
+    // TODO: Collision detection
 }

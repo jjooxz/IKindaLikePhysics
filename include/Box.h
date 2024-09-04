@@ -2,6 +2,7 @@
 #define BOX_H
 
 #include "PhysicsObject.h"
+#include <iostream>
 #include "Logger.h"
 
 class Box : public PhysicsObject
@@ -10,12 +11,11 @@ public:
     Box(Vector2 position, Vector2 velocity, float mass, float width, float height, bool isStatic = false) : PhysicsObject(position, velocity, mass, isStatic)
     {
     }
-    ~Box();
+    ~Box() {};
 
-    void draw() override
+    void draw() const override
     {
-        // TODO, using print for now
-        Logger::getInstance()->info("Box -> x: {}, y: {}", position.x, position.y);
+        SPDLOG_INFO(FMT_STRING("Box -> x: {}, y: {}"), position.x, position.y);
     }
 
 private:

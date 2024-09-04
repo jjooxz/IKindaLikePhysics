@@ -8,7 +8,7 @@ class PhysicsObject
 
 public:
     PhysicsObject(Vector2 position, Vector2 velocity, float mass, bool isStatic) : position(position), velocity(velocity), acceleration(0, 0), mass(mass), Static(isStatic) {};
-    virtual ~PhysicsObject();
+    virtual ~PhysicsObject() = default;
 
     Vector2 getPos() { return position; }
     Vector2 getVel() { return velocity; }
@@ -18,7 +18,7 @@ public:
         acceleration += force / mass;
     };
 
-    bool isStatic() { return isStatic; }
+    bool isStatic() { return Static; }
 
     void update(float dt)
     {
@@ -27,7 +27,7 @@ public:
         acceleration = Vector2(0, 0);
     }
 
-    virtual void draw() = 0;
+    virtual void draw() const = 0;
 
 protected:
     Vector2 position;
