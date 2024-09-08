@@ -2,6 +2,8 @@
 #define ENGINE_H
 
 #include "Physics.h"
+#include "Window.h"
+#include "Collision.h"
 
 class Engine
 {
@@ -25,7 +27,10 @@ public:
 private:
     Physics *physics;
     float deltaTime, gravity;
-    // Window* window;
+    Window* window;
+    Collision* collision;
+
+    void Sleep(int ms);
 };
 
 #endif

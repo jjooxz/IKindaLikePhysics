@@ -1,25 +1,26 @@
 #include "Physics.h"
 
-void Physics::addObject(PhysicsObject *object)
-{
-    objects.push_back(object);
-}
-
 void Physics::update(float deltaTime)
 {
-    for (PhysicsObject *object : objects)
+    for (auto &object : objects)
     {
-        if (object->isStatic())
-            continue;
-        object->applyForce({0, gravity});
-    }
+        if (!object->isStatic())
+        {
+            // Aplica a gravidade
+            object->setVel(object->getVel() + Vector2(0, gravity * deltaTime));
 
-    for (PhysicsObject *object : objects)
-    {
-        if (object->isStatic())
-            continue;
-        object->update(deltaTime);
-    }
+            // Atualiza a posição com base na velocidade
+            Vector2 newPos = object->getPos() + object->getVel() * deltaTime;
+            object->setPos(newPos);
 
-    // TODO: Collision detection
+            // Atualiza os vértices da caixa
+            object->update(deltaTime);
+            object->updateRotation(deltaTime);
+        }
+    }
+}
+
+void Physics::addObject(PhysicsObject *object)
+{
+    objects.push_back(object); // Supondo que 'objects' é um vetor que armazena os objetos físicos
 }

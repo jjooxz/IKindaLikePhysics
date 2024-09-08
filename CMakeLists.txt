@@ -12,15 +12,22 @@ set(SOURCES
     src/Physics.cpp
     src/main.cpp
     src/Engine.cpp
+    src/Window.cpp
+    src/Collision.cpp
+    src/CollisionResolution.cpp
 )
 
 set(HEADERS
     include/Box.h
+    include/Collision.h
+    include/CollisionResolution.h
+    include/Engine.h
     include/Logger.h
+    include/Objects.h
+    include/Physics.h
     include/PhysicsObject.h
     include/Vector2.h
-    include/Physics.h
-    include/Engine.h
+    include/Window.h
 )
 
 add_executable(IKindaLikePhysics ${SOURCES} ${HEADERS})
@@ -28,6 +35,8 @@ add_executable(IKindaLikePhysics ${SOURCES} ${HEADERS})
 # Encontrar o spdlog e fmt
 find_package(fmt CONFIG REQUIRED)
 find_package(spdlog CONFIG REQUIRED)
+find_package(sdl2 CONFIG REQUIRED)
+find_package(sdl2-gfx CONFIG REQUIRED)
 
 if(NOT spdlog_FOUND)
     message(WARNING "spdlog not found!")
@@ -37,3 +46,4 @@ endif(NOT spdlog_FOUND)
 
 # Linkar bibliotecas
 target_link_libraries(IKindaLikePhysics PRIVATE fmt::fmt)
+target_link_libraries(IKindaLikePhysics PRIVATE SDL2::SDL2 SDL2::SDL2main SDL2::SDL2_gfx)

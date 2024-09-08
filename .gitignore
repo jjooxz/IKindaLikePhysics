@@ -241,3 +241,7 @@ vcpkg_installed/x64-windows/share/vcpkg-cmake-config/vcpkg-port-config.cmake
 vcpkg_installed/x64-windows/share/vcpkg-cmake-config/vcpkg.spdx.json
 vcpkg.json
 vcpkg-configuration.json
+build/ALL_BUILD.vcxproj
+build/IKindaLikePhysics.vcxproj
+build/IKindaLikePhysics.vcxproj.filters
+build/ZERO_CHECK.vcxproj
