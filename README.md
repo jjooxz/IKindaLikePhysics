@@ -8,10 +8,12 @@ This is still in progress, maybe later i will transform this into a library like
 - [x] <strike>Made simple object class</strike>
 - [x] <strike>Made first object</strike>
 - [x] <strike>Made simple physics</strike>
-- [ ] Collision implementation 
-- [ ] Graphics
+- [x] <strike>(Basic) Collision implementation</strike>
+- [x] <strike>Graphics</strike>
 - [ ] More Objects
 - [ ] Advanced Objects (Hinges, Springs, Motors, Etc)
+
+I guess i wont update this no more, maybe another project like this will appear, with more complete things, this was just one thing i made because i was bored, but maybe next project will be better.
 
 ## Licence
 [MIT LICENCE](LICENCE)
